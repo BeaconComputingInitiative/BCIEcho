@@ -1,0 +1,36 @@
+<!-- BEACON COMPUTING INITIATIVE | Developer Seal: CJB-DEV-2026 | Chance Joaquin Boone -->
+<!-- SHA-256: see docs/HYGIENE_SHA256SUMS -->
+
+# Repository review: BCIEcho
+
+Reviewed: October 26, 2026. Default branch: `main`. Audited commit: `29d7d5950fbf407eff702a18226cf1ff3e5b33f5`.
+
+## Verified findings and follow-up
+
+- Remote source consists of documentation, branding, two recovery patches, and a local publication script. The complete runnable QML application is not on the inspected branch.
+- `recovery/patches/BCIEcho-v214-rebuild.sh` and `BCIEcho-v215-spatial-results.sh` are retained recovery artifacts, not competing current installers. Do not run or rename them as general setup scripts.
+- `docs/CURRENT_STATE.md` already documents the source gap and historical validation limits. Keep that accurate status prominent until authoritative application source is published.
+- No releases were returned. A clean tree alone does not establish a runnable release.
+- Local recordings, room measurements, device identifiers and telemetry should remain outside published source.
+
+## Repository rules
+
+- Maintain one documented current source tree and one supported starting point per product/platform. Give genuinely distinct tools purpose-based names.
+- Use Git commits, branches and tags for revisions. Avoid final, latest, new, old, backup and copy suffixes on source files.
+- Put downloadable builds and checksums in GitHub Releases. Keep recordings, telemetry, local environments and generated dependencies outside tracked source.
+- Keep version-qualified protocol/API names and regression-test names when they describe an actual compatibility contract.
+- Write commits as a concrete action and affected component, followed by the reason and relevant validation when needed. A late-night timestamp alone is not a quality defect.
+- Release if and only if the documented acceptance gates pass on the exact release commit. Clearly label previews, recovered source, device validation gaps and historical releases.
+- Keep the BCI header and developer seal on new authored files. Record their exact bytes in a SHA-256 manifest; do not attempt a self-referential file hash.
+
+## Automated prevention
+
+`Repository hygiene` runs on pushes and pull requests with read-only repository permissions. It inspects tracked files without executing project/application code. It rejects new confusing copy-style filenames, generated/runtime artifacts, recovery snapshot directories and byte-identical nonempty source copies. Existing paths are grandfathered against the audited commit, so this is prevention rather than a claim that historical issues are resolved. Empty package initializers are excluded from duplicate detection. Dataset duplicates are reported separately and left untouched.
+
+Run locally: `python3 tools/repository_hygiene.py --baseline 29d7d5950fbf407eff702a18226cf1ff3e5b33f5` and `sha256sum -c docs/HYGIENE_SHA256SUMS`.
+
+This check is advisory until merged, and it does not become a mandatory branch-protection rule automatically. It cannot prove semantic equivalence, runtime correctness, README accuracy or release readiness. Intentional shared code should be extracted into a common module; deliberate compatibility exceptions require a reviewed policy adjustment.
+
+## Review limits
+
+The complete non-truncated default-branch tree, available branch names, up to six recent commits, and published release metadata were inspected. Selected README and status/entrypoint contents were also read. Other branch contents, full historical commits, executable dependencies, hardware behavior, secrets, and deep code correctness were not audited. No history, datasets, release assets, runtime paths or existing branches are deleted by this change.
