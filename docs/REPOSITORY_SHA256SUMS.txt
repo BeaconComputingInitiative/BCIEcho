@@ -1,0 +1,8 @@
+# BEACON COMPUTING INITIATIVE | Developer Seal: CJB-DEV-2026
+# BCIEcho repository integrity manifest (SHA-256)
+# Each line hashes the precise GitHub file bytes, excluding this self-referential manifest.
+d0b279cbe9d0c0ea717929f37c654043f5f924fe89967656b14224593b61c399  assets/branding/bciecho-icon.webp
+7ab9594d34fa09faaaa0db8a3ce7944bf2f1ebf62db016a8d86a58602769c99a  README.md
+73809ee8ca503e4bac7213ee24666c4a87787d4c3c99db48f719af53446ee7ec  docs/PROJECT_OVERVIEW.md
+78d8cf8e0bcdb3c65ec2c7341481fb84c29efc0270667bc1d3c311e814ea7c61  docs/CURRENT_STATE.md
+0a17a1e576bbf552a1f7f9631434ff50046b7a5969298c7a88727e7164b3eab5  assets/branding/BRANDING.md
