@@ -8,7 +8,7 @@ BCIEcho is a local-first acoustic observation application for Linux/Kali. Its Py
 
 ## Source provenance
 
-This repository is being populated from the **BCIEcho v2.3 Neon Red Survey Guide Kali** source archive held in project history. The archive SHA-256 is:
+The complete **BCIEcho v2.3 Neon Red Survey Guide Kali** archive has been verified in project history, but its extracted main application source is **not yet committed here**. The current repository contains project documentation, two separately preserved patches, and the guarded Kali source-publishing script. The local working-tree source must be synchronized to complete publication. The archive SHA-256 is:
 
 ```text
 2d6d94b796b8265019f02f0ebc4626e786caebcfc50dc8c70662e95a23c45ec1  BCIEcho-v2.3-Neon-Red-Survey-Guide-Kali.zip
@@ -16,7 +16,7 @@ This repository is being populated from the **BCIEcho v2.3 Neon Red Survey Guide
 
 The archive's original `SHA256SUMS.txt` passed `sha256sum -c` when checked against its extracted content. Standalone **v2.1.4** boot-configuration and **v2.1.5** spatial-results patch scripts were saved later and must be treated as **unmerged recovery patches**, not verified integrations. The current on-device Kali working tree has not been inspected by this GitHub snapshot.
 
-## Application components
+## Expected application components (pending source synchronization)
 
 - `main_qml.py`, `qml/`, `bciecho_qml/`: PySide6/Qt Quick interface and backend bridge.
 - `main.py`, `bciecho/gui.py`: legacy PyQt6 interface.
@@ -25,7 +25,11 @@ The archive's original `SHA256SUMS.txt` passed `sha256sum -c` when checked again
 - `tests/`: archived unit tests.
 - `recovery/patches/`: separately preserved development patch scripts.
 
-## Running locally
+## Completing the local-source publication
+
+Run the reviewed `scripts/publish-from-kali.sh` on the Kali host that contains `~/BCIEcho`. It verifies the local entry points, stages selected source files, excludes common sensitive artifacts, records SHA-256 hashes, and pushes a normal commit to `main`. GitHub authentication with `gh` is required.
+
+## Running locally (once source is committed)
 
 ```bash
 # BEACON COMPUTING INITIATIVE | Developer Seal: CJB-DEV-2026
