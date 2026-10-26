@@ -1,0 +1,35 @@
+# BEACON COMPUTING INITIATIVE (BCI)
+# Developer Seal: CJB-DEV-2026
+# BCIEcho .gitignore
+# Integrity hashes are generated in docs during publication.
+
+.venv/
+.venv-*/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+node_modules/
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+logs/
+backups/
+recordings/
+room_survey_*.json
+*.wav
+*.flac
+*.mp3
+*.sqlite*
+*.db
+*.log
+*.jsonl
+.DS_Store
